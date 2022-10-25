@@ -1,0 +1,13 @@
+public Node insertNode(Node root, int val){
+                if(root == null){
+                        Node n = new Node(val);
+                        return n;
+                }
+                if(root.val > val){
+                        root.left = insertNode(root.left, val);
+                }
+                if(root.val < val){
+                        root.right = insertNode(root.right, val);
+                }
+                return root;
+        }
